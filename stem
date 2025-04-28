@@ -3,8 +3,11 @@
   <imports>
     <localimport file="minimal"/>
     <localimport file="prebuilts"/>
-    <import name="fuchsia"
-             root=""
-             remote="https://github.com/XSLabs/fuchsia"/>
   </imports>
+  <projects>
+    <project name="fuchsia"
+             gitsubmodules="true"
+             path="."
+             remote="https://github.com/XSLabs/fuchsia.git"/>
+  </projects>
 </manifest>
