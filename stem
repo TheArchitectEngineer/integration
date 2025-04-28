@@ -5,7 +5,6 @@
     <localimport file="prebuilts"/>
     <import name="fuchsia"
              root=""
-             remote="https://github.com/XSLabs/fuchsia"
-             revision="9c1052808b6497066dcb82e31b8094e0af3b789f"/>
+             remote="https://github.com/XSLabs/fuchsia"/>
   </imports>
 </manifest>
