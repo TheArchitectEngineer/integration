@@ -10,4 +10,12 @@
              path="."
              remote="https://github.com/XSLabs/fuchsia.git"/>
   </projects>
+  <hooks>
+    <hook name="install-environment"
+          project="fuchsia"
+          action="scripts/devshell/lib/add_symlink_to_bin.sh"/>
+    <hook name="create-build-info-files"
+          project="fuchsia"
+          action="build/info/create_jiri_hook_files.sh"/>
+  </hooks>
 </manifest>
