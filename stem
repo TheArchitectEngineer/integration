@@ -3,27 +3,19 @@
   <imports>
     <localimport file="minimal"/>
     <localimport file="prebuilts"/>
-    <import name="fuchsia"
-            manifest="manifests/platform"
-            root=""
-            remote="https://fuchsia.googlesource.com/fuchsia"
-            revision="58f28792f29f0be958c8c25c54e6500621c28a55"/>
   </imports>
   <projects>
-    <project name="cobalt"
-             path="third_party/cobalt"
-             remote="https://fuchsia.googlesource.com/cobalt"
-             revision="c72efd591b9675a5ee564e4ab048969801a0d06d"
-             gerrithost="https://fuchsia-review.googlesource.com"/>
-    <project name="cobalt-registry"
-             path="third_party/cobalt_config"
-             remote="https://fuchsia.googlesource.com/cobalt-registry"
-             revision="0eca9a11765d1b96a1313a9ff4c8e0afd581af28"
-             gerrithost="https://fuchsia-review.googlesource.com"/>
-    <project name="antlion"
-             path="third_party/antlion"
-             remote="https://fuchsia.googlesource.com/antlion"
-             gerrithost="https://fuchsia-review.googlesource.com"
-             revision="3887fdb32800215095518867d7f9208282c7ae2a"/>
+    <project name="fuchsia"
+             gitsubmodules="true"
+             path="."
+             remote="https://github.com/xslabs/fuchsia.git"/>
   </projects>
+  <hooks>
+    <hook name="install-environment"
+          project="fuchsia"
+          action="scripts/devshell/lib/add_symlink_to_bin.sh"/>
+    <hook name="create-build-info-files"
+          project="fuchsia"
+          action="build/info/create_jiri_hook_files.sh"/>
+  </hooks>
 </manifest>
