@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <projects>
+    <project name="cobalt"
+             path="third_party/cobalt"
+             remote="https://fuchsia.googlesource.com/cobalt"
+             revision="b6976c96abff1b6164f07bab414c058f4e633a58"
+             gerrithost="https://fuchsia-review.googlesource.com"/>
+    <project name="cobalt-registry"
+             path="third_party/cobalt_config"
+             remote="https://fuchsia.googlesource.com/cobalt-registry"
+             revision="d6e9b34dae47599f9bf55fef2b36a6b2021ec2b3"
+             gerrithost="https://fuchsia-review.googlesource.com"/>
+    <project name="antlion"
+             path="third_party/antlion"
+             remote="https://fuchsia.googlesource.com/antlion"
+             gerrithost="https://fuchsia-review.googlesource.com"
+             revision="c328418204f1bfe13c2fa009f1d69238437624b5"/>
+  </projects>
+</manifest>
